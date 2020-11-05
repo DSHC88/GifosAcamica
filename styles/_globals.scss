@@ -1,0 +1,332 @@
+   @import url('https://fonts.googleapis.com/css?family=Chakra+Petch:300,400,500,600,700&display=swap&subset=latin-ext');
+   $font-primary:'Chakra Petch',
+   sans-serif;
+   $page-padding: 0px 100px;
+   body {
+       font-family: $font-primary;
+       background-color: var(--bg-primary);
+       padding: $page-padding;
+       min-height: 100vh;
+   }
+   
+   .logo {
+       cursor: pointer;
+   }
+   
+   .btn {
+       height: 36px;
+       width: 144px;
+       font-family: $font-primary;
+       font-size: 16px;
+       font-weight: normal;
+       color: var(--bts-text-clr);
+       letter-spacing: 0;
+       text-align: center;
+       line-height: 18px;
+       background: var(--bts-clr-primary);
+       border: 1px solid var(--bts-border-clr);
+       box-shadow: inset -1px -1px 0 0 var(--bts-bottom-shadow), inset 1px 1px 0 0 var(--bts-top-shadow);
+       cursor: pointer;
+       &:hover,
+       &:active {
+           outline: 1px dotted var( --bts-text-clr);
+           background: var(--bts-hover-color);
+       }
+   }
+   
+   .btn-secondary {
+       @extend .btn;
+       background: var(--btn-secondary-bg);
+       &:hover,
+       &:active {
+           outline: 1px dotted var( --bts-text-clr);
+           background: var(--btn-secondary-bg-hv);
+       }
+   }
+   
+   .btn-warm {
+       @extend .btn;
+       background: var(--clr-warm);
+       &:hover,
+       &:active {
+           outline: 1px dotted var( --bts-text-clr);
+           background: var(--clr-warm);
+       }
+   }
+   
+   .btn:disabled {
+       background: var(--bg-frame);
+       color: var(--bottom-frame-shadow);
+       box-shadow: inset -1px -1px 0 0 var(--bottom-frame-shadow), inset 1px 1px 0 0 var(--top-frame-shadow);
+       border: 1px solid var(--btn-sailor-night-border);
+       &:hover,
+       &:active {
+           outline: none;
+           background: none;
+       }
+   }
+   
+   .header-general {
+       background-image: var(--gradient-header);
+       box-shadow: 0 1px 0 0 var(--bts-border-clr);
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       width: 100%;
+       height: 23px;
+       padding-left: 10px;
+       @include flex-row;
+       justify-content: flex-start;
+       h6 {
+           font-size: 12px;
+           color: #FFFFFF;
+           letter-spacing: 0;
+           font-weight: 500;
+       }
+   }
+   
+   .dinamico {
+       display: none;
+   }
+   
+   .nav-bar {
+       @include flex-row;
+       margin: 59px 0px 0px;
+       justify-content: space-between;
+       width: 100%;
+       .bts-nav {
+           @include flex-row;
+           justify-content: space-between;
+       }
+       button {
+           margin: 0px 16px 0px 0px;
+       }
+       .elegirTemaDrop {
+           width: 36px;
+       }
+       .elegirTema {
+           margin: 0px 0px;
+       }
+       .misGif {
+           text-align: left;
+           border: none;
+           background-color: var(--bg-primary);
+           color: var(--bts-text-clr);
+           &:first-letter {
+               text-decoration: underline;
+           }
+           &:hover,
+           &:active {
+               outline: 1px dotted var( --bts-text-clr);
+           }
+           &:active {
+               color: #88799b;
+           }
+       }
+       .dropDonwMenu {
+           position: relative;
+           z-index: 10;
+       }
+       .menu {
+           position: absolute;
+           top: 36px;
+           left: 0px;
+           background-color: var(--bg-frame);
+           box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+           width: 180px;
+           padding: 10px 10px 0px 10px;
+           @include flex-colunm;
+           opacity: 0;
+           visibility: hidden;
+           transition: all 0.2s ease-in-out 0s;
+           li {
+               list-style: none;
+               width: 100%;
+           }
+           button {
+               width: 100%;
+               margin-bottom: 10px;
+               text-align: left;
+               padding-left: 16px;
+           }
+       }
+       .mostrar {
+           -webkit-transition: all 0.2s ease-in-out 0s;
+           -moz-transition: all 0.2s ease-in-out 0s;
+           -ms-transition: all 0.2s ease-in-out 0s;
+           transition: all 0.2s ease-in-out 0s;
+           opacity: 1;
+           visibility: visible;
+       }
+       .Sailor-Day {
+           color: #110038;
+           background-color: var(--btn-sailor-day);
+           border: 1px solid var(--btn-sailor-day-border);
+           box-shadow: inset -1px -1px 0 0 var(--btn-sailor-day-shadow), inset 1px 1px 0 0 var(--btn-sailor-day-inner-shadow);
+       }
+       .Sailor-Night {
+           background-color: var(--btn-sailor-night);
+           border: 1px solid var(--btn-sailor-night-border);
+           box-shadow: inset -1px -1px 0 0 var(--btn-sailor-night-shadow), inset 1px 1px 0 0 var(--btn-sailor-night-inner-shadow);
+       }
+   }
+   
+   .galeriaGif {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+       gap: 16px;
+   }
+   
+   .cardGif {
+       background: transparent;
+       position: relative;
+       height: 280px;
+       @include flex-row;
+       padding: 2px;
+       overflow: hidden;
+       box-shadow: none;
+       &:hover {
+           background: var(--bg-frame);
+           box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+       }
+       img {
+           height: 100%;
+           width: 100%;
+           &:hover~.foot {
+               @include flex-row;
+               background: var(--gradient-header);
+               position: absolute;
+               bottom: 2px;
+               left: 2px;
+               width: 99%;
+               font-size: 14px;
+               color: #FFFFFF;
+               letter-spacing: 0;
+               font-weight: bold;
+               height: 24px;
+           }
+       }
+       .foot {
+           display: none;
+           p {
+               padding: 5px;
+               overflow: hidden;
+               white-space: nowrap;
+               text-overflow: ellipsis;
+           }
+       }
+   }
+   
+   .barrratitulo {
+       @include flex-row;
+       justify-content: flex-start;
+       margin: 50px 0px 20px;
+       background: #FFFAFE;
+       border: 1px solid var(--border-clr);
+       box-shadow: inset -2px -2px 0 0 var(--inner-sadow), inset 2px 2px 0 0 var(--outder-sadow);
+       p {
+           font-family: $font-primary;
+           font-size: 14px;
+           color: #110038;
+           letter-spacing: 0;
+           margin: 7px;
+       }
+   }
+   
+   .suge-traje {
+       @include flex-colunm;
+       background: var(--bg-frame);
+       box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+       padding: 2px;
+       position: relative;
+       height: 280px;
+       overflow: hidden;
+       img {
+           width: 100%;
+           height: 100%;
+       }
+       .suge-btn-vmas {
+           cursor: pointer;
+           position: absolute;
+           bottom: 19px;
+           left: 11px;
+           color: #FFFFFF;
+           width: fit-content;
+           padding: 8px 10px;
+           background: var(--clr-secondary);
+           border: 1px solid var(--btn-sug-border);
+           box-shadow: inset -2px -2px 0 0 var(--btn-sug-shadow-inner), inset 2px 2px 0 0 var(--btn-sug-shadow-outer);
+           &:hover,
+           &:active {
+               outline: 1px dotted var( --bts-text-clr);
+           }
+       }
+   }
+   
+   .suge-header {
+       position: absolute;
+       top: 2px;
+       left: 2px;
+       right: 2px;
+       @include flex-row;
+       justify-content: space-between;
+       width: auto;
+       padding: 4px;
+       background: var(--gradient-header);
+       p {
+           width: auto;
+           padding-right: 5px;
+           font-size: 14px;
+           color: #FFFFFF;
+           letter-spacing: 0;
+           font-weight: bold;
+           overflow: hidden;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+       }
+       img {
+           width: 16px;
+           height: 14px;
+       }
+   }
+   
+   .espacio {
+       height: 50px;
+   }
+   
+   .header-botton {
+       background-image: var(--gradient-header);
+       box-shadow: 0 1px 0 0 var(--bts-border-clr);
+       position: absolute;
+       left: 0px;
+       width: 100%;
+       height: 23px;
+       padding-left: 10px;
+       @include flex-row;
+       justify-content: flex-start;
+       h6 {
+           font-size: 12px;
+           color: #FFFFFF;
+           letter-spacing: 0;
+           font-weight: 500;
+       }
+   }
+   
+   .notificacion {
+       position: absolute;
+       top: 30px;
+       right: 10px;
+       min-width: 200px;
+       max-width: 300px;
+       padding: 10px;
+       min-height: 50px;
+       border-radius: 10px;
+       @include flex-row;
+       background: var(--bg-frame);
+       box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+       p {
+           overflow: hidden;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+       }
+   }

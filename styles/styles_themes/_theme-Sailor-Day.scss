@@ -1,0 +1,38 @@
+:root,
+[color-theme='Sailor-Day'] {
+    --clr-primary: #F7C9F3;
+    --clr-secondary: #4180F6;
+    --clr-warm: #FF6161;
+    --bg-primary: #fff4fd;
+    --bg-frame: #E6E6E6;
+    --gradient-header: linear-gradient(270deg, var(--clr-primary) 0%, var(--clr-secondary) 100%);
+    --bts-clr-primary: var(--clr-primary);
+    --bts-clr-secondary: var(--clr-secondary);
+    --bts-clr-warm: var(--clr-warm);
+    --bts-clr-calm: var(--bg-primary);
+    --bts-border-clr: #110038;
+    --bts-top-shadow: #FFFFFF;
+    --bts-bottom-shadow: #997D97;
+    --bts-warm-shadow: #993A3A;
+    --bts-text-clr: #110038;
+    --bts-hover-color: #e6bbe2;
+    --btn-sailor-day: #fff4fd;
+    --btn-sailor-day-border: #CCA6C9;
+    --btn-sailor-day-shadow: #E6DCE4;
+    --btn-sailor-day-inner-shadow: #FFFFFF;
+    --btn-sailor-night: #f0f0f0;
+    --btn-sailor-night-border: #808080;
+    --btn-sailor-night-shadow: #B4B4B4;
+    --btn-sailor-night-inner-shadow: #FFFFFF;
+    --btn-sug-border: #4C2F99;
+    --btn-sug-shadow-inner: #284F99;
+    --btn-sug-shadow-outer: #FFFFFF;
+    --btn-secondary-bg: #FFF4FD;
+    --btn-secondary-bg-hv: #E6E6E6;
+    --top-frame-shadow: #FFFFFF;
+    --bottom-frame-shadow: #B4B4B4;
+    --border-clr: #E6BBE2;
+    --inner-sadow: #E6DCE4;
+    --outder-sadow: #80687D;
+    --sug-btn-bg-clr: #F0F0F0;
+}
